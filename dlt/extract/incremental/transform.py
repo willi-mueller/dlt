@@ -117,7 +117,6 @@ class JsonIncremental(IncrementalTransform):
 
         Will use compiled JSONPath if present, otherwise it reverts to column search if row is dict
         """
-        # breakpoint()
         if self.cursor_path not in row.keys() and not self._compiled_cursor_path:
             raise IncrementalCursorPathMissing(self.resource_name, self.cursor_path, row)
 
