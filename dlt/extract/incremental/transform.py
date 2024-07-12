@@ -151,7 +151,6 @@ class JsonIncremental(IncrementalTransform):
         Returns:
             Tuple (row, is_below_initial_value, is_above_end_value) where row is either the data item or `None` if it is completely filtered out
         """
-        breakpoint()
         if row is None:
             return row, False, False
 
